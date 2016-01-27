@@ -13,7 +13,7 @@ struct ArticleController {
    
     func list() -> [Article] {
         do {
-            let content =  try String(contentsOfFile: "./Server/data.json")
+            let content =  try String(contentsOfFile: "./Server/data.json", usingEncodig: NSUTF8StringEncoding)
             let json = try JSONParser.parse(content)
             
             guard let articles = json["articles"]?.arrayValue else { return [Article]() }
