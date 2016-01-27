@@ -7,19 +7,22 @@
 //
 
 import Foundation
-struct Article {
-    let title: String
-    let content: String
-    
-    func mustache() -> [String : String] {
-        return ["title" : self.title, "content" : self.content]
-    }
-    
-}
+import JSON
 
 struct ArticleController {
    
     func list() -> [Article] {
-        return [Article(title: "test", content: "test content")]
+        do {
+            let content =  try String(contentsOfFile: "./Server/data.json")
+            let json = try JSONParser.parse(content)
+            
+            guard let articles = json["articles"]?.arrayValue else { return [Article]() }
+            
+            return articles.map { Article.objectFromJSON($0) }.filter { $0 != nil }.map { $0! }
+        }
+        catch let error as NSError {
+            print("Error list : \(error)")
+            return [Article]()
+        }
     }
 }

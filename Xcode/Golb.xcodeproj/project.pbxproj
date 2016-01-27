@@ -46,6 +46,8 @@
 		097D05DC1C595B310038291B /* timer.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05CE1C595B310038291B /* timer.c */; };
 		097D05DD1C595B310038291B /* udp.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05CF1C595B310038291B /* udp.c */; };
 		097D05DE1C595B310038291B /* unix.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05D01C595B310038291B /* unix.c */; };
+		099BE31A1C59696400AAF8C9 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099BE3191C59696400AAF8C9 /* Article.swift */; };
+		099BE31D1C596A8300AAF8C9 /* libJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 099BE31C1C596A8300AAF8C9 /* libJSON.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -131,6 +133,9 @@
 		097D05CE1C595B310038291B /* timer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = timer.c; path = include/libvenice/timer.c; sourceTree = "<group>"; };
 		097D05CF1C595B310038291B /* udp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = udp.c; path = include/libvenice/udp.c; sourceTree = "<group>"; };
 		097D05D01C595B310038291B /* unix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = unix.c; path = include/libvenice/unix.c; sourceTree = "<group>"; };
+		099BE3191C59696400AAF8C9 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		099BE31B1C5969F200AAF8C9 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
+		099BE31C1C596A8300AAF8C9 /* libJSON.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libJSON.a; path = Libs/libJSON.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +148,7 @@
 				097D05711C5955B40038291B /* libPostgreSQL.a in Frameworks */,
 				097D05721C5955B40038291B /* libMiddleware.a in Frameworks */,
 				097D05731C5955B40038291B /* libRouter.a in Frameworks */,
+				099BE31D1C596A8300AAF8C9 /* libJSON.a in Frameworks */,
 				097D05741C5955B40038291B /* libSQL.a in Frameworks */,
 				097D05751C5955B40038291B /* libEpoch.a in Frameworks */,
 				097D05761C5955B40038291B /* libVenice.a in Frameworks */,
@@ -223,6 +229,7 @@
 				097D056C1C5955B40038291B /* libHTTP.a */,
 				097D056D1C5955B40038291B /* libHTTPParser.a */,
 				097D056E1C5955B40038291B /* libCore.a */,
+				099BE31C1C596A8300AAF8C9 /* libJSON.a */,
 			);
 			name = deps;
 			sourceTree = "<group>";
@@ -230,6 +237,7 @@
 		0951518C1C581C35004B6E93 = {
 			isa = PBXGroup;
 			children = (
+				099BE31B1C5969F200AAF8C9 /* Package.swift */,
 				0932BB771C5960240025C900 /* deps */,
 				0932BB7B1C59616E0025C900 /* Client */,
 				0951519F1C581C7A004B6E93 /* Server */,
@@ -249,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				095151A11C581C7A004B6E93 /* main.swift */,
+				099BE3191C59696400AAF8C9 /* Article.swift */,
 				0932BB791C5960FE0025C900 /* ArticleController.swift */,
 				0932BB781C5960590025C900 /* data.json */,
 			);
@@ -350,6 +359,7 @@
 				097D05DA1C595B310038291B /* stack.c in Sources */,
 				097D05DB1C595B310038291B /* tcp.c in Sources */,
 				097D05DC1C595B310038291B /* timer.c in Sources */,
+				099BE31A1C59696400AAF8C9 /* Article.swift in Sources */,
 				097D05DD1C595B310038291B /* udp.c in Sources */,
 				097D05DE1C595B310038291B /* unix.c in Sources */,
 			);
@@ -446,6 +456,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/Libs/",
 					/usr/local/lib,
+					"$(PROJECT_DIR)/Libs",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/../.build/debug/ $SRCROOT";
@@ -460,6 +471,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/Libs/",
 					/usr/local/lib,
+					"$(PROJECT_DIR)/Libs",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/../.build/debug/ $SRCROOT";
