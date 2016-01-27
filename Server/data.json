@@ -1,0 +1,11 @@
+{ "articles" :
+    [{
+     "title" : "Using Xcode with Swift Package Manager",
+     "content" : "Test"
+     },
+     {
+     "title" : "Swift Webserver on Linux",
+     "content" : "Test"
+     }
+     ]
+}

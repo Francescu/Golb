@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0932BB7A1C5960FE0025C900 /* ArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0932BB791C5960FE0025C900 /* ArticleController.swift */; };
 		095151A21C581C7A004B6E93 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095151A11C581C7A004B6E93 /* main.swift */; };
 		097D056F1C5955B40038291B /* libSideburns.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097D05641C5955B40038291B /* libSideburns.a */; };
 		097D05701C5955B40038291B /* libMustache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097D05651C5955B40038291B /* libMustache.a */; };
@@ -60,6 +61,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0932BB781C5960590025C900 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		0932BB791C5960FE0025C900 /* ArticleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleController.swift; sourceTree = "<group>"; };
+		0932BB7B1C59616E0025C900 /* Client */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Client; path = ../Client; sourceTree = "<group>"; };
 		095151951C581C35004B6E93 /* Golb */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Golb; sourceTree = BUILT_PRODUCTS_DIR; };
 		095151A11C581C7A004B6E93 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		097D05641C5955B40038291B /* libSideburns.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSideburns.a; path = Libs/libSideburns.a; sourceTree = "<group>"; };
@@ -151,7 +155,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0951518C1C581C35004B6E93 = {
+		0932BB771C5960240025C900 /* deps */ = {
 			isa = PBXGroup;
 			children = (
 				097D05C31C595B310038291B /* chan.c */,
@@ -219,6 +223,15 @@
 				097D056C1C5955B40038291B /* libHTTP.a */,
 				097D056D1C5955B40038291B /* libHTTPParser.a */,
 				097D056E1C5955B40038291B /* libCore.a */,
+			);
+			name = deps;
+			sourceTree = "<group>";
+		};
+		0951518C1C581C35004B6E93 = {
+			isa = PBXGroup;
+			children = (
+				0932BB771C5960240025C900 /* deps */,
+				0932BB7B1C59616E0025C900 /* Client */,
 				0951519F1C581C7A004B6E93 /* Server */,
 				095151961C581C35004B6E93 /* Products */,
 			);
@@ -236,6 +249,8 @@
 			isa = PBXGroup;
 			children = (
 				095151A11C581C7A004B6E93 /* main.swift */,
+				0932BB791C5960FE0025C900 /* ArticleController.swift */,
+				0932BB781C5960590025C900 /* data.json */,
 			);
 			name = Server;
 			path = ../Server;
@@ -331,6 +346,7 @@
 				097D05D71C595B310038291B /* list.c in Sources */,
 				097D05D81C595B310038291B /* poller.c in Sources */,
 				097D05D91C595B310038291B /* slist.c in Sources */,
+				0932BB7A1C5960FE0025C900 /* ArticleController.swift in Sources */,
 				097D05DA1C595B310038291B /* stack.c in Sources */,
 				097D05DB1C595B310038291B /* tcp.c in Sources */,
 				097D05DC1C595B310038291B /* timer.c in Sources */,

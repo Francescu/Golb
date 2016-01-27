@@ -11,24 +11,16 @@ import CLibvenice
 import Sideburns
 
 let router = Router() { router in
-
-    router.post("/users") { request in
-        // do something based on the Request
-        return Response(status: .Created)
+    router.get("/") { request in
+        let controller = ArticleController()
+        let data = ["articles" : controller.list().map { $0.mustache() } ]
+        return try Response(status: .OK, templatePath: "./Client/index.html", templateData: data)
     }
-
-    router.get("/users/:id") { request in
-        let id = request.parameters["id"]
-        // do something based on the Request and id
-        return Response(status: .OK, body: "YYY")
-    } 
-
+    
     router.fallback() { request in
-        let data = ["path" : request.parameters["path"]]
+        let data = ["path" : request.uri.path]
         return try Response(status: .NotFound, templatePath: "./Client/404.html", templateData: data)
     }
-
-
 }
 
 let server = Server(port: 8000, responder: router)
