@@ -25,11 +25,12 @@ let router = Router() { router in
 
     router.fallback() { request in
         let data = ["path" : request.parameters["path"]]
-        return Response(status: .NotFound, templatePath: "./Client/404.html", templateData: data)
+        return try Response(status: .NotFound, templatePath: "./Client/404.html", templateData: data)
     }
 
 
 }
 
-let server = Server(port: 8080, responder: router)
+let server = Server(port: 8000, responder: router)
+print("Server ready http://127.0.0.1:8000")
 server.start()

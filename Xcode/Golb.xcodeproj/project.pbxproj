@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		095151A21C581C7A004B6E93 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095151A11C581C7A004B6E93 /* main.swift */; };
+		097D056F1C5955B40038291B /* libSideburns.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097D05641C5955B40038291B /* libSideburns.a */; };
+		097D05701C5955B40038291B /* libMustache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097D05651C5955B40038291B /* libMustache.a */; };
+		097D05711C5955B40038291B /* libPostgreSQL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097D05661C5955B40038291B /* libPostgreSQL.a */; };
+		097D05721C5955B40038291B /* libMiddleware.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097D05671C5955B40038291B /* libMiddleware.a */; };
+		097D05731C5955B40038291B /* libRouter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097D05681C5955B40038291B /* libRouter.a */; };
+		097D05741C5955B40038291B /* libSQL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097D05691C5955B40038291B /* libSQL.a */; };
+		097D05751C5955B40038291B /* libEpoch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097D056A1C5955B40038291B /* libEpoch.a */; };
+		097D05761C5955B40038291B /* libVenice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097D056B1C5955B40038291B /* libVenice.a */; };
+		097D05771C5955B40038291B /* libHTTP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097D056C1C5955B40038291B /* libHTTP.a */; };
+		097D05781C5955B40038291B /* libHTTPParser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097D056D1C5955B40038291B /* libHTTPParser.a */; };
+		097D05791C5955B40038291B /* libCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097D056E1C5955B40038291B /* libCore.a */; };
+		097D05AB1C595AC50038291B /* libvenice.h in Headers */ = {isa = PBXBuildFile; fileRef = 097D05A41C595AC50038291B /* libvenice.h */; };
+		097D05AC1C595AC50038291B /* list.h in Headers */ = {isa = PBXBuildFile; fileRef = 097D05A51C595AC50038291B /* list.h */; };
+		097D05AD1C595AC50038291B /* poller.h in Headers */ = {isa = PBXBuildFile; fileRef = 097D05A61C595AC50038291B /* poller.h */; };
+		097D05AE1C595AC50038291B /* slist.h in Headers */ = {isa = PBXBuildFile; fileRef = 097D05A71C595AC50038291B /* slist.h */; };
+		097D05AF1C595AC50038291B /* stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 097D05A81C595AC50038291B /* stack.h */; };
+		097D05B01C595AC50038291B /* timer.h in Headers */ = {isa = PBXBuildFile; fileRef = 097D05A91C595AC50038291B /* timer.h */; };
+		097D05B11C595AC50038291B /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 097D05AA1C595AC50038291B /* utils.h */; };
+		097D05BE1C595AFE0038291B /* chan.h in Headers */ = {isa = PBXBuildFile; fileRef = 097D05B21C595AFE0038291B /* chan.h */; };
+		097D05BF1C595AFE0038291B /* cr.h in Headers */ = {isa = PBXBuildFile; fileRef = 097D05B31C595AFE0038291B /* cr.h */; };
+		097D05C01C595AFE0038291B /* debug.h in Headers */ = {isa = PBXBuildFile; fileRef = 097D05B41C595AFE0038291B /* debug.h */; };
+		097D05C11C595AFE0038291B /* dns.h in Headers */ = {isa = PBXBuildFile; fileRef = 097D05B51C595AFE0038291B /* dns.h */; };
+		097D05C21C595AFE0038291B /* ip.h in Headers */ = {isa = PBXBuildFile; fileRef = 097D05B61C595AFE0038291B /* ip.h */; };
+		097D05D11C595B310038291B /* chan.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05C31C595B310038291B /* chan.c */; };
+		097D05D21C595B310038291B /* cr.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05C41C595B310038291B /* cr.c */; };
+		097D05D31C595B310038291B /* debug.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05C51C595B310038291B /* debug.c */; };
+		097D05D41C595B310038291B /* dns.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05C61C595B310038291B /* dns.c */; };
+		097D05D51C595B310038291B /* file.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05C71C595B310038291B /* file.c */; };
+		097D05D61C595B310038291B /* ip.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05C81C595B310038291B /* ip.c */; };
+		097D05D71C595B310038291B /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05C91C595B310038291B /* list.c */; };
+		097D05D81C595B310038291B /* poller.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05CA1C595B310038291B /* poller.c */; };
+		097D05D91C595B310038291B /* slist.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05CB1C595B310038291B /* slist.c */; };
+		097D05DA1C595B310038291B /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05CC1C595B310038291B /* stack.c */; };
+		097D05DB1C595B310038291B /* tcp.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05CD1C595B310038291B /* tcp.c */; };
+		097D05DC1C595B310038291B /* timer.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05CE1C595B310038291B /* timer.c */; };
+		097D05DD1C595B310038291B /* udp.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05CF1C595B310038291B /* udp.c */; };
+		097D05DE1C595B310038291B /* unix.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05D01C595B310038291B /* unix.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		095151931C581C35004B6E93 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		095151951C581C35004B6E93 /* Golb */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Golb; sourceTree = BUILT_PRODUCTS_DIR; };
+		095151A11C581C7A004B6E93 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		097D05641C5955B40038291B /* libSideburns.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSideburns.a; path = Libs/libSideburns.a; sourceTree = "<group>"; };
+		097D05651C5955B40038291B /* libMustache.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMustache.a; path = Libs/libMustache.a; sourceTree = "<group>"; };
+		097D05661C5955B40038291B /* libPostgreSQL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPostgreSQL.a; path = Libs/libPostgreSQL.a; sourceTree = "<group>"; };
+		097D05671C5955B40038291B /* libMiddleware.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMiddleware.a; path = Libs/libMiddleware.a; sourceTree = "<group>"; };
+		097D05681C5955B40038291B /* libRouter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRouter.a; path = Libs/libRouter.a; sourceTree = "<group>"; };
+		097D05691C5955B40038291B /* libSQL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSQL.a; path = Libs/libSQL.a; sourceTree = "<group>"; };
+		097D056A1C5955B40038291B /* libEpoch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEpoch.a; path = Libs/libEpoch.a; sourceTree = "<group>"; };
+		097D056B1C5955B40038291B /* libVenice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVenice.a; path = Libs/libVenice.a; sourceTree = "<group>"; };
+		097D056C1C5955B40038291B /* libHTTP.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHTTP.a; path = Libs/libHTTP.a; sourceTree = "<group>"; };
+		097D056D1C5955B40038291B /* libHTTPParser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHTTPParser.a; path = Libs/libHTTPParser.a; sourceTree = "<group>"; };
+		097D056E1C5955B40038291B /* libCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCore.a; path = Libs/libCore.a; sourceTree = "<group>"; };
+		097D057A1C5955EE0038291B /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		097D057C1C595A5D0038291B /* kqueue.inc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.pascal; name = kqueue.inc; path = include/libvenice/kqueue.inc; sourceTree = "<group>"; };
+		097D057D1C595A5D0038291B /* libvenice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = libvenice.h; path = include/libvenice/libvenice.h; sourceTree = "<group>"; };
+		097D057E1C595A5D0038291B /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = include/libvenice/LICENSE; sourceTree = "<group>"; };
+		097D057F1C595A5D0038291B /* list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = list.c; path = include/libvenice/list.c; sourceTree = "<group>"; };
+		097D05801C595A5D0038291B /* list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = list.h; path = include/libvenice/list.h; sourceTree = "<group>"; };
+		097D05811C595A5D0038291B /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; name = Makefile; path = include/libvenice/Makefile; sourceTree = "<group>"; };
+		097D05821C595A5D0038291B /* poll.inc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.pascal; name = poll.inc; path = include/libvenice/poll.inc; sourceTree = "<group>"; };
+		097D05831C595A5D0038291B /* poller.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = poller.c; path = include/libvenice/poller.c; sourceTree = "<group>"; };
+		097D05841C595A5D0038291B /* poller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = poller.h; path = include/libvenice/poller.h; sourceTree = "<group>"; };
+		097D05851C595A5D0038291B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = include/libvenice/README.md; sourceTree = "<group>"; };
+		097D05861C595A5D0038291B /* slist.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = slist.c; path = include/libvenice/slist.c; sourceTree = "<group>"; };
+		097D05871C595A5D0038291B /* slist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = slist.h; path = include/libvenice/slist.h; sourceTree = "<group>"; };
+		097D05881C595A5D0038291B /* stack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = stack.c; path = include/libvenice/stack.c; sourceTree = "<group>"; };
+		097D05891C595A5D0038291B /* stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stack.h; path = include/libvenice/stack.h; sourceTree = "<group>"; };
+		097D058A1C595A5D0038291B /* tcp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = tcp.c; path = include/libvenice/tcp.c; sourceTree = "<group>"; };
+		097D058B1C595A5D0038291B /* timer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = timer.c; path = include/libvenice/timer.c; sourceTree = "<group>"; };
+		097D058C1C595A5D0038291B /* timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = timer.h; path = include/libvenice/timer.h; sourceTree = "<group>"; };
+		097D058D1C595A5D0038291B /* udp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = udp.c; path = include/libvenice/udp.c; sourceTree = "<group>"; };
+		097D058E1C595A5D0038291B /* unix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = unix.c; path = include/libvenice/unix.c; sourceTree = "<group>"; };
+		097D058F1C595A5D0038291B /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = utils.h; path = include/libvenice/utils.h; sourceTree = "<group>"; };
+		097D05A41C595AC50038291B /* libvenice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = libvenice.h; path = include/libvenice/libvenice.h; sourceTree = "<group>"; };
+		097D05A51C595AC50038291B /* list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = list.h; path = include/libvenice/list.h; sourceTree = "<group>"; };
+		097D05A61C595AC50038291B /* poller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = poller.h; path = include/libvenice/poller.h; sourceTree = "<group>"; };
+		097D05A71C595AC50038291B /* slist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = slist.h; path = include/libvenice/slist.h; sourceTree = "<group>"; };
+		097D05A81C595AC50038291B /* stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stack.h; path = include/libvenice/stack.h; sourceTree = "<group>"; };
+		097D05A91C595AC50038291B /* timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = timer.h; path = include/libvenice/timer.h; sourceTree = "<group>"; };
+		097D05AA1C595AC50038291B /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = utils.h; path = include/libvenice/utils.h; sourceTree = "<group>"; };
+		097D05B21C595AFE0038291B /* chan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = chan.h; path = include/libvenice/chan.h; sourceTree = "<group>"; };
+		097D05B31C595AFE0038291B /* cr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = cr.h; path = include/libvenice/cr.h; sourceTree = "<group>"; };
+		097D05B41C595AFE0038291B /* debug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = debug.h; path = include/libvenice/debug.h; sourceTree = "<group>"; };
+		097D05B51C595AFE0038291B /* dns.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = dns.h; path = include/libvenice/dns.h; sourceTree = "<group>"; };
+		097D05B61C595AFE0038291B /* ip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ip.h; path = include/libvenice/ip.h; sourceTree = "<group>"; };
+		097D05B71C595AFE0038291B /* libvenice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = libvenice.h; path = include/libvenice/libvenice.h; sourceTree = "<group>"; };
+		097D05B81C595AFE0038291B /* list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = list.h; path = include/libvenice/list.h; sourceTree = "<group>"; };
+		097D05B91C595AFE0038291B /* poller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = poller.h; path = include/libvenice/poller.h; sourceTree = "<group>"; };
+		097D05BA1C595AFE0038291B /* slist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = slist.h; path = include/libvenice/slist.h; sourceTree = "<group>"; };
+		097D05BB1C595AFE0038291B /* stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stack.h; path = include/libvenice/stack.h; sourceTree = "<group>"; };
+		097D05BC1C595AFE0038291B /* timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = timer.h; path = include/libvenice/timer.h; sourceTree = "<group>"; };
+		097D05BD1C595AFE0038291B /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = utils.h; path = include/libvenice/utils.h; sourceTree = "<group>"; };
+		097D05C31C595B310038291B /* chan.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = chan.c; path = include/libvenice/chan.c; sourceTree = "<group>"; };
+		097D05C41C595B310038291B /* cr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = cr.c; path = include/libvenice/cr.c; sourceTree = "<group>"; };
+		097D05C51C595B310038291B /* debug.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = debug.c; path = include/libvenice/debug.c; sourceTree = "<group>"; };
+		097D05C61C595B310038291B /* dns.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = dns.c; path = include/libvenice/dns.c; sourceTree = "<group>"; };
+		097D05C71C595B310038291B /* file.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = file.c; path = include/libvenice/file.c; sourceTree = "<group>"; };
+		097D05C81C595B310038291B /* ip.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = ip.c; path = include/libvenice/ip.c; sourceTree = "<group>"; };
+		097D05C91C595B310038291B /* list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = list.c; path = include/libvenice/list.c; sourceTree = "<group>"; };
+		097D05CA1C595B310038291B /* poller.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = poller.c; path = include/libvenice/poller.c; sourceTree = "<group>"; };
+		097D05CB1C595B310038291B /* slist.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = slist.c; path = include/libvenice/slist.c; sourceTree = "<group>"; };
+		097D05CC1C595B310038291B /* stack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = stack.c; path = include/libvenice/stack.c; sourceTree = "<group>"; };
+		097D05CD1C595B310038291B /* tcp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = tcp.c; path = include/libvenice/tcp.c; sourceTree = "<group>"; };
+		097D05CE1C595B310038291B /* timer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = timer.c; path = include/libvenice/timer.c; sourceTree = "<group>"; };
+		097D05CF1C595B310038291B /* udp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = udp.c; path = include/libvenice/udp.c; sourceTree = "<group>"; };
+		097D05D01C595B310038291B /* unix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = unix.c; path = include/libvenice/unix.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		095151921C581C35004B6E93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				097D056F1C5955B40038291B /* libSideburns.a in Frameworks */,
+				097D05701C5955B40038291B /* libMustache.a in Frameworks */,
+				097D05711C5955B40038291B /* libPostgreSQL.a in Frameworks */,
+				097D05721C5955B40038291B /* libMiddleware.a in Frameworks */,
+				097D05731C5955B40038291B /* libRouter.a in Frameworks */,
+				097D05741C5955B40038291B /* libSQL.a in Frameworks */,
+				097D05751C5955B40038291B /* libEpoch.a in Frameworks */,
+				097D05761C5955B40038291B /* libVenice.a in Frameworks */,
+				097D05771C5955B40038291B /* libHTTP.a in Frameworks */,
+				097D05781C5955B40038291B /* libHTTPParser.a in Frameworks */,
+				097D05791C5955B40038291B /* libCore.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0951518C1C581C35004B6E93 = {
+			isa = PBXGroup;
+			children = (
+				097D05C31C595B310038291B /* chan.c */,
+				097D05C41C595B310038291B /* cr.c */,
+				097D05C51C595B310038291B /* debug.c */,
+				097D05C61C595B310038291B /* dns.c */,
+				097D05C71C595B310038291B /* file.c */,
+				097D05C81C595B310038291B /* ip.c */,
+				097D05C91C595B310038291B /* list.c */,
+				097D05CA1C595B310038291B /* poller.c */,
+				097D05CB1C595B310038291B /* slist.c */,
+				097D05CC1C595B310038291B /* stack.c */,
+				097D05CD1C595B310038291B /* tcp.c */,
+				097D05CE1C595B310038291B /* timer.c */,
+				097D05CF1C595B310038291B /* udp.c */,
+				097D05D01C595B310038291B /* unix.c */,
+				097D05B21C595AFE0038291B /* chan.h */,
+				097D05B31C595AFE0038291B /* cr.h */,
+				097D05B41C595AFE0038291B /* debug.h */,
+				097D05B51C595AFE0038291B /* dns.h */,
+				097D05B61C595AFE0038291B /* ip.h */,
+				097D05B71C595AFE0038291B /* libvenice.h */,
+				097D05B81C595AFE0038291B /* list.h */,
+				097D05B91C595AFE0038291B /* poller.h */,
+				097D05BA1C595AFE0038291B /* slist.h */,
+				097D05BB1C595AFE0038291B /* stack.h */,
+				097D05BC1C595AFE0038291B /* timer.h */,
+				097D05BD1C595AFE0038291B /* utils.h */,
+				097D05A41C595AC50038291B /* libvenice.h */,
+				097D05A51C595AC50038291B /* list.h */,
+				097D05A61C595AC50038291B /* poller.h */,
+				097D05A71C595AC50038291B /* slist.h */,
+				097D05A81C595AC50038291B /* stack.h */,
+				097D05A91C595AC50038291B /* timer.h */,
+				097D05AA1C595AC50038291B /* utils.h */,
+				097D057C1C595A5D0038291B /* kqueue.inc */,
+				097D057D1C595A5D0038291B /* libvenice.h */,
+				097D057E1C595A5D0038291B /* LICENSE */,
+				097D057F1C595A5D0038291B /* list.c */,
+				097D05801C595A5D0038291B /* list.h */,
+				097D05811C595A5D0038291B /* Makefile */,
+				097D05821C595A5D0038291B /* poll.inc */,
+				097D05831C595A5D0038291B /* poller.c */,
+				097D05841C595A5D0038291B /* poller.h */,
+				097D05851C595A5D0038291B /* README.md */,
+				097D05861C595A5D0038291B /* slist.c */,
+				097D05871C595A5D0038291B /* slist.h */,
+				097D05881C595A5D0038291B /* stack.c */,
+				097D05891C595A5D0038291B /* stack.h */,
+				097D058A1C595A5D0038291B /* tcp.c */,
+				097D058B1C595A5D0038291B /* timer.c */,
+				097D058C1C595A5D0038291B /* timer.h */,
+				097D058D1C595A5D0038291B /* udp.c */,
+				097D058E1C595A5D0038291B /* unix.c */,
+				097D058F1C595A5D0038291B /* utils.h */,
+				097D057A1C5955EE0038291B /* module.modulemap */,
+				097D05641C5955B40038291B /* libSideburns.a */,
+				097D05651C5955B40038291B /* libMustache.a */,
+				097D05661C5955B40038291B /* libPostgreSQL.a */,
+				097D05671C5955B40038291B /* libMiddleware.a */,
+				097D05681C5955B40038291B /* libRouter.a */,
+				097D05691C5955B40038291B /* libSQL.a */,
+				097D056A1C5955B40038291B /* libEpoch.a */,
+				097D056B1C5955B40038291B /* libVenice.a */,
+				097D056C1C5955B40038291B /* libHTTP.a */,
+				097D056D1C5955B40038291B /* libHTTPParser.a */,
+				097D056E1C5955B40038291B /* libCore.a */,
+				0951519F1C581C7A004B6E93 /* Server */,
+				095151961C581C35004B6E93 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		095151961C581C35004B6E93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				095151951C581C35004B6E93 /* Golb */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0951519F1C581C7A004B6E93 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				095151A11C581C7A004B6E93 /* main.swift */,
+			);
+			name = Server;
+			path = ../Server;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		097D057B1C595A4B0038291B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				097D05BE1C595AFE0038291B /* chan.h in Headers */,
+				097D05BF1C595AFE0038291B /* cr.h in Headers */,
+				097D05C01C595AFE0038291B /* debug.h in Headers */,
+				097D05C11C595AFE0038291B /* dns.h in Headers */,
+				097D05C21C595AFE0038291B /* ip.h in Headers */,
+				097D05AB1C595AC50038291B /* libvenice.h in Headers */,
+				097D05AC1C595AC50038291B /* list.h in Headers */,
+				097D05AD1C595AC50038291B /* poller.h in Headers */,
+				097D05AE1C595AC50038291B /* slist.h in Headers */,
+				097D05AF1C595AC50038291B /* stack.h in Headers */,
+				097D05B01C595AC50038291B /* timer.h in Headers */,
+				097D05B11C595AC50038291B /* utils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		095151941C581C35004B6E93 /* Golb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0951519C1C581C35004B6E93 /* Build configuration list for PBXNativeTarget "Golb" */;
+			buildPhases = (
+				095151911C581C35004B6E93 /* Sources */,
+				095151921C581C35004B6E93 /* Frameworks */,
+				095151931C581C35004B6E93 /* CopyFiles */,
+				097D057B1C595A4B0038291B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Golb;
+			productName = Golb;
+			productReference = 095151951C581C35004B6E93 /* Golb */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0951518D1C581C35004B6E93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Francescu;
+				TargetAttributes = {
+					095151941C581C35004B6E93 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 095151901C581C35004B6E93 /* Build configuration list for PBXProject "Golb" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0951518C1C581C35004B6E93;
+			productRefGroup = 095151961C581C35004B6E93 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				095151941C581C35004B6E93 /* Golb */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		095151911C581C35004B6E93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				095151A21C581C7A004B6E93 /* main.swift in Sources */,
+				097D05D11C595B310038291B /* chan.c in Sources */,
+				097D05D21C595B310038291B /* cr.c in Sources */,
+				097D05D31C595B310038291B /* debug.c in Sources */,
+				097D05D41C595B310038291B /* dns.c in Sources */,
+				097D05D51C595B310038291B /* file.c in Sources */,
+				097D05D61C595B310038291B /* ip.c in Sources */,
+				097D05D71C595B310038291B /* list.c in Sources */,
+				097D05D81C595B310038291B /* poller.c in Sources */,
+				097D05D91C595B310038291B /* slist.c in Sources */,
+				097D05DA1C595B310038291B /* stack.c in Sources */,
+				097D05DB1C595B310038291B /* tcp.c in Sources */,
+				097D05DC1C595B310038291B /* timer.c in Sources */,
+				097D05DD1C595B310038291B /* udp.c in Sources */,
+				097D05DE1C595B310038291B /* unix.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0951519A1C581C35004B6E93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0951519B1C581C35004B6E93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0951519D1C581C35004B6E93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/Libs/",
+					/usr/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/../.build/debug/ $SRCROOT";
+			};
+			name = Debug;
+		};
+		0951519E1C581C35004B6E93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/Libs/",
+					/usr/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/../.build/debug/ $SRCROOT";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		095151901C581C35004B6E93 /* Build configuration list for PBXProject "Golb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0951519A1C581C35004B6E93 /* Debug */,
+				0951519B1C581C35004B6E93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0951519C1C581C35004B6E93 /* Build configuration list for PBXNativeTarget "Golb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0951519D1C581C35004B6E93 /* Debug */,
+				0951519E1C581C35004B6E93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0951518D1C581C35004B6E93 /* Project object */;
+}
