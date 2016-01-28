@@ -15,13 +15,24 @@ struct ArticleController {
     
     func list(request: Request) -> Response {
         do {
+            print("list")
             let content = try String(contentsOfFile: self.dataPath, encoding: NSUTF8StringEncoding)
             let json = try JSONParser.parse(content)
             
+            print("got json")
             guard let articlesRaw = json["articles"]?.arrayValue else { throw NSError(domain:"jsoncontent", code:1, userInfo:nil) }
             let articles = articlesRaw.map { Article.objectFromJSON($0) }.filter { $0 != nil }.map { $0! }
             
-            return Response(status: .OK, body:  ArticleListView.render(articles) >% RootView.render)
+            print("got articles")
+            
+            let r = ArticleListView.render(articles)
+            
+            print("rendered articles list")
+            
+            let x = root.render(r)
+            
+            print("rendered home")
+            return Response(status: .OK, body: x )
             
         }
         catch let error as NSError {

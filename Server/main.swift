@@ -14,10 +14,14 @@ import Mustache
 let router = Router() { router in
     router.get("/", ArticleController().list)
     
-    router.fallback() { request in
-        let path = request.uri.path ?? "Unknown"
-        return Response(status: .NotFound, body: ErrorView.render("404", message: "Path not found: \(path)"))
-    }
+    let responder = FileResponder(basePath: "./Client/Static/")
+    router.fallback(responder)
+//
+//
+//    router.fallback() { request in
+//        let path = request.uri.path ?? "Unknown"
+//        return Response(status: .NotFound, body: ErrorView.render("404", message: "Path not found: \(path)"))
+//    }
 }
 
 let server = Server(port: 8000, responder: router)

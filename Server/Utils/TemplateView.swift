@@ -26,15 +26,15 @@ protocol AnyTemplateViewYield: AnyTemplateView {
 }
 
 extension AnyTemplateView {
-    static var template: Template {
-        let fileContent = try! String(contentsOfFile: path, encoding: 4)
-        return try! Template(string: fileContent)
-        
-    }
+    
     
     static func render(params: [String : MustacheBoxable]) -> String {
         return try! self.template.render(Box(boxable: params))
     }
+}
+func createTemplate(path: String) -> Template {
+    let fileContent = try! String(contentsOfFile: path, encoding: 4)
+    return try! Template(string: fileContent)
 }
 
 extension AnyTemplateViewYield {
