@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0932BB7A1C5960FE0025C900 /* ArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0932BB791C5960FE0025C900 /* ArticleController.swift */; };
+		09460D871C5A0B72006BB494 /* PostgreSQLTmp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09460D861C5A0B72006BB494 /* PostgreSQLTmp.swift */; };
+		09460D891C5A1A06006BB494 /* TemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09460D881C5A1A06006BB494 /* TemplateView.swift */; };
+		09460D8C1C5A2482006BB494 /* templates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09460D8B1C5A2482006BB494 /* templates.swift */; };
+		09460D8E1C5A2A43006BB494 /* ArticleViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09460D8D1C5A2A43006BB494 /* ArticleViews.swift */; };
 		095151A21C581C7A004B6E93 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095151A11C581C7A004B6E93 /* main.swift */; };
 		097D056F1C5955B40038291B /* libSideburns.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097D05641C5955B40038291B /* libSideburns.a */; };
 		097D05701C5955B40038291B /* libMustache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097D05651C5955B40038291B /* libMustache.a */; };
@@ -46,7 +50,7 @@
 		097D05DC1C595B310038291B /* timer.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05CE1C595B310038291B /* timer.c */; };
 		097D05DD1C595B310038291B /* udp.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05CF1C595B310038291B /* udp.c */; };
 		097D05DE1C595B310038291B /* unix.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05D01C595B310038291B /* unix.c */; };
-		099BE31A1C59696400AAF8C9 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099BE3191C59696400AAF8C9 /* Article.swift */; };
+		099BE31A1C59696400AAF8C9 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099BE3191C59696400AAF8C9 /* ArticleModel.swift */; };
 		099BE31D1C596A8300AAF8C9 /* libJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 099BE31C1C596A8300AAF8C9 /* libJSON.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +70,10 @@
 		0932BB781C5960590025C900 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		0932BB791C5960FE0025C900 /* ArticleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleController.swift; sourceTree = "<group>"; };
 		0932BB7B1C59616E0025C900 /* Client */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Client; path = ../Client; sourceTree = "<group>"; };
+		09460D861C5A0B72006BB494 /* PostgreSQLTmp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostgreSQLTmp.swift; sourceTree = "<group>"; };
+		09460D881C5A1A06006BB494 /* TemplateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateView.swift; sourceTree = "<group>"; };
+		09460D8B1C5A2482006BB494 /* templates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = templates.swift; sourceTree = "<group>"; };
+		09460D8D1C5A2A43006BB494 /* ArticleViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViews.swift; sourceTree = "<group>"; };
 		095151951C581C35004B6E93 /* Golb */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Golb; sourceTree = BUILT_PRODUCTS_DIR; };
 		095151A11C581C7A004B6E93 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		097D05641C5955B40038291B /* libSideburns.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSideburns.a; path = Libs/libSideburns.a; sourceTree = "<group>"; };
@@ -133,7 +141,7 @@
 		097D05CE1C595B310038291B /* timer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = timer.c; path = include/libvenice/timer.c; sourceTree = "<group>"; };
 		097D05CF1C595B310038291B /* udp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = udp.c; path = include/libvenice/udp.c; sourceTree = "<group>"; };
 		097D05D01C595B310038291B /* unix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = unix.c; path = include/libvenice/unix.c; sourceTree = "<group>"; };
-		099BE3191C59696400AAF8C9 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		099BE3191C59696400AAF8C9 /* ArticleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		099BE31B1C5969F200AAF8C9 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		099BE31C1C596A8300AAF8C9 /* libJSON.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libJSON.a; path = Libs/libJSON.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +172,7 @@
 		0932BB771C5960240025C900 /* deps */ = {
 			isa = PBXGroup;
 			children = (
+				097D057A1C5955EE0038291B /* module.modulemap */,
 				097D05C31C595B310038291B /* chan.c */,
 				097D05C41C595B310038291B /* cr.c */,
 				097D05C51C595B310038291B /* debug.c */,
@@ -217,7 +226,6 @@
 				097D058D1C595A5D0038291B /* udp.c */,
 				097D058E1C595A5D0038291B /* unix.c */,
 				097D058F1C595A5D0038291B /* utils.h */,
-				097D057A1C5955EE0038291B /* module.modulemap */,
 				097D05641C5955B40038291B /* libSideburns.a */,
 				097D05651C5955B40038291B /* libMustache.a */,
 				097D05661C5955B40038291B /* libPostgreSQL.a */,
@@ -232,6 +240,34 @@
 				099BE31C1C596A8300AAF8C9 /* libJSON.a */,
 			);
 			name = deps;
+			sourceTree = "<group>";
+		};
+		09460D8A1C5A2466006BB494 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				09460D8B1C5A2482006BB494 /* templates.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		09460D8F1C5A2A4A006BB494 /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				09460D8D1C5A2A43006BB494 /* ArticleViews.swift */,
+				0932BB791C5960FE0025C900 /* ArticleController.swift */,
+				099BE3191C59696400AAF8C9 /* ArticleModel.swift */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
+		09460D901C5A2A53006BB494 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				09460D881C5A1A06006BB494 /* TemplateView.swift */,
+				0932BB781C5960590025C900 /* data.json */,
+				09460D861C5A0B72006BB494 /* PostgreSQLTmp.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		0951518C1C581C35004B6E93 = {
@@ -256,10 +292,10 @@
 		0951519F1C581C7A004B6E93 /* Server */ = {
 			isa = PBXGroup;
 			children = (
+				09460D901C5A2A53006BB494 /* Utils */,
+				09460D8A1C5A2466006BB494 /* Config */,
+				09460D8F1C5A2A4A006BB494 /* Articles */,
 				095151A11C581C7A004B6E93 /* main.swift */,
-				099BE3191C59696400AAF8C9 /* Article.swift */,
-				0932BB791C5960FE0025C900 /* ArticleController.swift */,
-				0932BB781C5960590025C900 /* data.json */,
 			);
 			name = Server;
 			path = ../Server;
@@ -351,15 +387,19 @@
 				097D05D31C595B310038291B /* debug.c in Sources */,
 				097D05D41C595B310038291B /* dns.c in Sources */,
 				097D05D51C595B310038291B /* file.c in Sources */,
+				09460D891C5A1A06006BB494 /* TemplateView.swift in Sources */,
 				097D05D61C595B310038291B /* ip.c in Sources */,
 				097D05D71C595B310038291B /* list.c in Sources */,
+				09460D8C1C5A2482006BB494 /* templates.swift in Sources */,
 				097D05D81C595B310038291B /* poller.c in Sources */,
 				097D05D91C595B310038291B /* slist.c in Sources */,
 				0932BB7A1C5960FE0025C900 /* ArticleController.swift in Sources */,
+				09460D8E1C5A2A43006BB494 /* ArticleViews.swift in Sources */,
 				097D05DA1C595B310038291B /* stack.c in Sources */,
 				097D05DB1C595B310038291B /* tcp.c in Sources */,
+				09460D871C5A0B72006BB494 /* PostgreSQLTmp.swift in Sources */,
 				097D05DC1C595B310038291B /* timer.c in Sources */,
-				099BE31A1C59696400AAF8C9 /* Article.swift in Sources */,
+				099BE31A1C59696400AAF8C9 /* ArticleModel.swift in Sources */,
 				097D05DD1C595B310038291B /* udp.c in Sources */,
 				097D05DE1C595B310038291B /* unix.c in Sources */,
 			);

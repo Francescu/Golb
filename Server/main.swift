@@ -9,17 +9,14 @@ import Epoch
 import CHTTPParser
 import CLibvenice
 import Sideburns
+import Mustache
 
 let router = Router() { router in
-    router.get("/") { request in
-        let controller = ArticleController()
-        let data = ["articles" : controller.list().map { $0.mustache() } ]
-        return try Response(status: .OK, templatePath: "./Client/index.html", templateData: data)
-    }
+    router.get("/", ArticleController().list)
     
     router.fallback() { request in
-        let data = ["path" : request.uri.path]
-        return try Response(status: .NotFound, templatePath: "./Client/404.html", templateData: data)
+        let path = request.uri.path ?? "Unknown"
+        return Response(status: .NotFound, body: ErrorView.render("404", message: "Path not found: \(path)"))
     }
 }
 

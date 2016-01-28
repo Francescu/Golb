@@ -10,6 +10,13 @@ module CURIParser [system] {
 //    export *
 //}
 
+
+module CLibpq [system] {
+    header "/usr/local/include/libpq-fe.h"
+    link "pq"
+    export *
+}
+
 module CLibvenice [system] {
     header "./include/libvenice/libvenice.h"
     link "Venice"
