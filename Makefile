@@ -1,5 +1,6 @@
 SHELL   :=/bin/bash
 DOCKER_DEV_NAME = golb-dev
+DBNAME = Golb
 PORT = 8000
 
 docker:
@@ -7,6 +8,9 @@ docker:
 	docker rm container-$(DOCKER_DEV_NAME)
 	docker run -d -p $(PORT):$(PORT) --name container-$(DOCKER_DEV_NAME) $(DOCKER_DEV_NAME)
 
-dev-run:
+local:
 	swift build 
-	.build/debug/Server
+	export GOLB_POSTGRES_CONNECTION=postgresql://localhost/$(DBNAME) && .build/debug/Server
+
+database:
+	psql -lqt | cut -d \| -f 1 | grep -wq $(DBNAME) || createdb $(DBNAME)

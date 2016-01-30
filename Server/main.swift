@@ -11,6 +11,8 @@ import CLibvenice
 import Sideburns
 import Mustache
 
+let db = Database()
+
 let router = Router() { router in
     router.get("/", ArticleController().list)
     
