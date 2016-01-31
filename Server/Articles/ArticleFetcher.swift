@@ -8,45 +8,10 @@
 
 import Foundation
 import PostgreSQL
-//
-//func sqlTest() {
-//    let connection = Connection("postgresql://localhost/blog")
-//    do {
-//        try connection.open()
-//        let result = try connection.execute("SELECT * FROM posts")
-//        for row in result {
-//            print(row)
-//        }
-//    } catch {
-//        print(error)
-//    }
-//}
-struct ArticleFetcher {
-    let connection = db.connection
-    
-    func findAll() -> Result<[Article]> {
-        do {
-            try connection.open()
-            print("open db")
-            let result = try connection.execute("SELECT title, content FROM articles ORDER BY created DESC;")
-            connection.close()
-            return .Success(result.mapSome(Article.objectFromDB))
-        }
-        catch PostgreSQL.Result.Error.BadStatus(_, let error) {
-            print("SQL Error \(error)")
-            return .Error(nil)
-        }
-        catch let error as NSError {
-            print("error \(error)")
-            return .Error(error)
-        }
-    }
-}
-
-
+import SQL
 
 extension Article {
-    static func objectFromDB(row: Row) -> Article? {
+    static func create(fromRow row: PostgreSQL.Row) -> Article? {
         guard let title = row["title"]?.string,
             let content = row["content"]?.string else {
                 return nil
@@ -54,6 +19,10 @@ extension Article {
         
         return Article(title: title, content: content)
     }
+    
+    static let configuration = FetcherConfiguration<Article>(tableName: "articles",
+                                                         defaultSelectFields: ["id", "content", "title", "created"],
+                                                                              create: Article.create)
 }
 
 //extension Article {

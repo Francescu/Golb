@@ -12,4 +12,7 @@ import JSON
 struct Article {
     let title: String
     let content: String
+
+    
 }
+

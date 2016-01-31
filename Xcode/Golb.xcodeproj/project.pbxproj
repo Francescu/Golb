@@ -52,6 +52,7 @@
 		097D05DE1C595B310038291B /* unix.c in Sources */ = {isa = PBXBuildFile; fileRef = 097D05D01C595B310038291B /* unix.c */; };
 		099BE31A1C59696400AAF8C9 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099BE3191C59696400AAF8C9 /* ArticleModel.swift */; };
 		099BE31D1C596A8300AAF8C9 /* libJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 099BE31C1C596A8300AAF8C9 /* libJSON.a */; };
+		09C335E81C5E39E500613D77 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C335E71C5E39E500613D77 /* Fetcher.swift */; };
 		09E5A06B1C5AC793009C040F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5A06A1C5AC793009C040F /* Utils.swift */; };
 		09E5A06D1C5AC7B4009C040F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5A06C1C5AC7B4009C040F /* Result.swift */; };
 		09E5A06F1C5AC7F3009C040F /* ArticleFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5A06E1C5AC7F3009C040F /* ArticleFetcher.swift */; };
@@ -148,6 +149,7 @@
 		099BE3191C59696400AAF8C9 /* ArticleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		099BE31B1C5969F200AAF8C9 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		099BE31C1C596A8300AAF8C9 /* libJSON.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libJSON.a; path = Libs/libJSON.a; sourceTree = "<group>"; };
+		09C335E71C5E39E500613D77 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		09DDA24A1C5CCD310022F0C0 /* db.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = db.sql; sourceTree = "<group>"; };
 		09E5A06A1C5AC793009C040F /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		09E5A06C1C5AC7B4009C040F /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				0932BB781C5960590025C900 /* data.json */,
 				09E5A06A1C5AC793009C040F /* Utils.swift */,
 				09E5A06C1C5AC7B4009C040F /* Result.swift */,
+				09C335E71C5E39E500613D77 /* Fetcher.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				097D05D61C595B310038291B /* ip.c in Sources */,
 				09E5A0711C5AC856009C040F /* Settings.swift in Sources */,
 				097D05D71C595B310038291B /* list.c in Sources */,
+				09C335E81C5E39E500613D77 /* Fetcher.swift in Sources */,
 				09460D8C1C5A2482006BB494 /* templates.swift in Sources */,
 				097D05D81C595B310038291B /* poller.c in Sources */,
 				097D05D91C595B310038291B /* slist.c in Sources */,
