@@ -10,6 +10,7 @@ import Foundation
 import PostgreSQL
 import SQL
 
+
 enum FetcherError: ErrorType {
     case NotFound
     case SQL(message: String)
@@ -23,6 +24,8 @@ struct FetcherConfiguration<Entity> {
 
 struct Fetcher<Entity> {
     
+    typealias SQLError = PostgreSQL.Result.Error
+    
     let configuration: FetcherConfiguration<Entity>
     private let connection = db.connection
     
@@ -35,7 +38,7 @@ struct Fetcher<Entity> {
     }
     
     func find(identifier: String) throws -> Entity {
-        guard let result = try select(configuration.defaultSelectFields, request: "WHERE id = $1 LIMIT 0,1", parameters: identifier).first else {
+        guard let result = try select(configuration.defaultSelectFields, request: "WHERE id = $1 LIMIT 1", parameters: identifier).first else {
             throw FetcherError.NotFound
         }
         return result
@@ -51,10 +54,13 @@ struct Fetcher<Entity> {
             statement += " " + request
         }
         
-        let result = try connection.execute(statement, parameters: parameters)
-        
-        
-        return result.mapSome(configuration.create)
+        do {
+            let result = try connection.execute(statement, parameters: parameters)
+            return result.mapSome(configuration.create)
+        }
+        catch SQLError.BadStatus(_, let string) {
+            throw FetcherError.SQL(message: string)
+        }
     }
    
     

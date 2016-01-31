@@ -15,6 +15,7 @@ let db = Database()
 
 let router = Router() { router in
     router.get("/", ArticleController().list)
+    router.get("/article/:id", ArticleController().show)
     
     let responder = FileResponder(basePath: "./Client/Static/")
     router.fallback(responder)

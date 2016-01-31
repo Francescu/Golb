@@ -12,12 +12,14 @@ import SQL
 
 extension Article {
     static func create(fromRow row: PostgreSQL.Row) -> Article? {
-        guard let title = row["title"]?.string,
+        guard
+            let identifier = row["id"]?.string,
+            let title = row["title"]?.string,
             let content = row["content"]?.string else {
                 return nil
         }
         
-        return Article(title: title, content: content)
+        return Article(identifier: identifier, title: title, content: content)
     }
     
     static let configuration = FetcherConfiguration<Article>(tableName: "articles",

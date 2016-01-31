@@ -10,6 +10,7 @@ import Foundation
 import JSON
 import HTTP
 
+
 struct ArticleController {
     private let dataPath = "./Server/Utils/data.json"
     private let fetcher: Fetcher<Article>
@@ -19,16 +20,18 @@ struct ArticleController {
     }
     
     func list(request: Request) -> Response {
-        do {
+        return $.respond("article list") {
             let articles = try fetcher.findAll()
-            return Response(status: .OK, body: ArticleListView.render(articles) >% root.render )
+            return try Response(status: .OK, body: ArticleViews.List.render(articles) >% root.render )
         }
-        catch let error as NSError {
-            print("Error: \(error)")
-            return Response(status: .NoContent, body: ErrorView.render("No content", message: error.localizedDescription))
-        }
-        
     }
     
+    func show(request: Request) -> Response {
+        return $.respond("article show") {
+            let identifier = try $.extract(request.parameters["id"])
+            let article = try fetcher.find(identifier)
+            return try Response(status: .OK, body: ArticleViews.Show.render(article) >% root.render )
+        }
+    }
 }
 

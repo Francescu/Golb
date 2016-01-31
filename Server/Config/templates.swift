@@ -9,12 +9,6 @@
 import Foundation
 import Mustache
 
-//struct RootView: AnyTemplateViewYield {
-//    static let path = "./Client/index.html"
-//    static let field = "yield"
-//    static let template = createTemplate(path)
-//}
-
 struct RootView {
     let header: String
     let footer: String
@@ -30,11 +24,12 @@ struct RootView {
 }
 let root = RootView()
 
-struct ErrorView: AnyTemplateView {
-    static let path = "./Client/error.html"
-    static let template = createTemplate(path)
-    
-    static func render(error: String, message: String) -> String {
-        return render(["error" : error, "message": message]) >% root.render
+struct ErrorView: AnyTemplateViewYield {
+    let path = "./Client/error.html"
+    let template: Template
+    let field = "yield"
+    init() {
+       self.template = createTemplate(self.path)
     }
 }
+

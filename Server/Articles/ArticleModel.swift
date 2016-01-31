@@ -10,6 +10,7 @@ import Foundation
 import JSON
 
 struct Article {
+    let identifier: String
     let title: String
     let content: String
 

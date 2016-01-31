@@ -12,42 +12,43 @@ import HTTP
 
 
 protocol AnyTemplateView {
-    static var path: String { get }
-    static var template: Template { get }
+    var path: String { get }
+    var template: Template { get }
     
-    static func render(params: [String : MustacheBoxable]) -> String
+    func render(params: [String : MustacheBoxable]) throws -> String
 }
 
 protocol AnyTemplateViewYield: AnyTemplateView {
-    static var field: String { get }
+    var field: String { get }
     
-    static func render(content: String, params: [String : MustacheBoxable]) -> String
-    static func render(content: String) -> String
+    func render(content: String, params: [String : MustacheBoxable]) throws -> String
+    func render(content: String) throws -> String
 }
 
 extension AnyTemplateView {
-    
-    
-    static func render(params: [String : MustacheBoxable]) -> String {
-        return try! self.template.render(Box(boxable: params))
+    func render(params: [String : MustacheBoxable]) throws -> String {
+        let boxed = Box(boxable: params)
+        return try self.template.render(boxed)
     }
 }
+
 func createTemplate(path: String) -> Template {
     let fileContent = try! String(contentsOfFile: path, encoding: 4)
-    return try! Template(string: fileContent)
+    let t = try! Template(string: fileContent)
+    return t
 }
 
 extension AnyTemplateViewYield {
-    static func render(content: String) -> String {
+    func render(content: String) throws -> String {
         let p: [String : MustacheBoxable] = [field : content]
-        return try! self.template.render(Box(boxable: p))
+        return try self.template.render(Box(boxable: p))
     }
     
-    static func render(content: String, params: [String : MustacheBoxable]) -> String {
+    func render(content: String, params: [String : MustacheBoxable]) throws -> String {
         var p = params
         p[field] = content
         
-        return try! self.template.render(Box(boxable: p))
+        return try self.template.render(Box(boxable: p))
     }
 
 }
