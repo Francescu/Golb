@@ -19,6 +19,7 @@ Swift as a Webserver on Linux – Blog written in Swift
 
 ## Better dev tool
 - [ ] Fully integrate docker-compose/Tutum for deployment (instead of external Postgres URL)
+- [ ] Add an access/error log system and made it persist through a docker volume-container
 - [ ] Create a cli to generate/scaffold project, models, routes, views, controllers 
 - [ ] Add unit testing
 - [ ] Run in Xcode
