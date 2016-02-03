@@ -55,13 +55,11 @@ struct $ {
     static func log(message: String) {
         print(message)
         debugLogger.log(message)
-        fflush(stdout)
     }
     
     static func accessLog(message: String) {
         print(message)
         accessLogger.log(message)
-        fflush(stdout)
     }
     
     static let error: (content:String) -> String = { root.render(try! Views.Error.render($0)) }
