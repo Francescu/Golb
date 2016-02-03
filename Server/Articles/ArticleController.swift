@@ -19,19 +19,16 @@ struct ArticleController {
         fetcher = Fetcher(configuration: Article.configuration)
     }
     
-    func list(request: Request) -> Response {
-        return $.respond("article list") {
-            let articles = try fetcher.findAll()
-            return try Response(status: .OK, body: ArticleViews.List.render(articles) >% root.render )
-        }
+    func list(request: Request) throws -> Response {
+        throw FetcherError.NotFound
+        let articles = try fetcher.findAll()
+        return try Response(status: .OK, body: ArticleViews.List.render(articles) >% root.render )
     }
     
-    func show(request: Request) -> Response {
-        return $.respond("article show") {
-            let identifier = try $.extract(request.parameters["id"])
-            let article = try fetcher.find(identifier)
-            return try Response(status: .OK, body: ArticleViews.Show.render(article) >% root.render )
-        }
+    func show(request: Request) throws -> Response {
+        let identifier = try $.extract(request.parameters["id"])
+        let article = try fetcher.find(identifier)
+        return try Response(status: .OK, body: ArticleViews.Show.render(article) >% root.render )
     }
 }
 

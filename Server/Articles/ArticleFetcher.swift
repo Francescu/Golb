@@ -22,9 +22,9 @@ extension Article {
         return Article(identifier: identifier, title: title, content: content)
     }
     
-    static let configuration = FetcherConfiguration<Article>(tableName: "articles",
-                                                         defaultSelectFields: ["id", "content", "title", "created"],
-                                                                              create: Article.create)
+    static let configuration = FetcherConfiguration(tableName: "articles",
+                                                    defaultSelectFields: ["id", "content", "title", "created"],
+                                                    create: Article.create)
 }
 
 //extension Article {

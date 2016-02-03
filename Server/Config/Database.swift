@@ -1,46 +1,52 @@
-//
-//  PostgreSQLTmp.swift
-//  Golb
-//
-//  Created by Francescu Santoni on 28/01/16.
-//  Copyright © 2016 Francescu. All rights reserved.
-//
-
-import Foundation
 import PostgreSQL
 import JSON
 
 struct Database {
     let connection = Connection(Connection.Info(connectionString: Settings.PostgresConnection))
+    
+    let initial = Migration(identifier: "init")
+    let migrations = ["0_users"].map(Migration.init)
 
     init() {
-        self.createTables()
+        self.migrate()
     }
     
-    private func createTables() {
+    private func migrate() {
         do_or_log("DB Init") {
             try connection.open()
-            do {
-                try connection.executeFromFile(atPath:"./Server/Config/db.sql")
-            }
-            catch PostgreSQL.Result.Error.BadStatus(_, let s) {
-                print(s)
-            }
+            try initial.apply(connection)
+            
             connection.close()
         }
     }
-    
 }
 
-func sqlTest() {
-    let connection = Connection("postgresql://localhost/blog")
-    do {
-        try connection.open()
-        let result = try connection.execute("SELECT * FROM posts")
-        for row in result {
-            print(row)
-        }
-    } catch {
-        print(error)
+struct Migration {
+    static let basePath = "./Server/Config/DB/"
+    static let ext = "sql"
+    
+    let identifier: String
+    
+    var fullPath: String {
+        return Migration.basePath + self.identifier + "." + Migration.ext
     }
+    
+    func apply(connection: Connection) throws {
+        try connection.executeFromFile(atPath: self.fullPath)
+    }
+}
+
+extension Migration {
+    static func create(fromRow row: PostgreSQL.Row) -> Migration? {
+        guard
+            let identifier = row["id"]?.string else {
+                return nil
+        }
+        
+        return Migration(identifier: identifier)
+    }
+    
+    static let configuration = FetcherConfiguration(tableName: "migrations",
+                                                    defaultSelectFields: ["id", "created"],
+                                                    create: Migration.create)
 }

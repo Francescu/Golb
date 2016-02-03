@@ -1,7 +1,7 @@
 SHELL   :=/bin/bash
 DOCKER_DEV_NAME = golb-dev
 DBNAME = Golb
-PORT = 8000
+PORT = 8002
 
 docker:
 	docker build -t $(DOCKER_DEV_NAME) .

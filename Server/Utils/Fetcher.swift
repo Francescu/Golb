@@ -56,11 +56,26 @@ struct Fetcher<Entity> {
         
         do {
             let result = try connection.execute(statement, parameters: parameters)
+            connection.close()
             return result.mapSome(configuration.create)
         }
         catch SQLError.BadStatus(_, let string) {
+            connection.close()
             throw FetcherError.SQL(message: string)
         }
+        
+    }
+    
+    func insert(fields: [String], values: SQL.SQLParameterConvertible...) {
+        var statement = "INSERT INTO " + configuration.tableName
+        statement += " (" + fields.joinWithSeparator(",") + ")"
+        statement += " VALUES ("
+        
+        let v = values.enumerate().map { "$" + String(Int($0.0 + 1)) }
+        statement += v.joinWithSeparator(", ")
+        statement += ");"
+        
+        
     }
    
     

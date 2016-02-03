@@ -8,6 +8,7 @@
 
 import Foundation
 import HTTP
+import PostgreSQL
 
 extension SequenceType {
     func mapSome<T>(@noescape transform: (Self.Generator.Element) throws -> T?) rethrows -> [T] {
@@ -25,6 +26,12 @@ func do_or_log(identifier: String, message: String? = nil, @noescape closure: (V
             $.log(message)
         }
     }
+    catch PostgreSQL.Result.Error.BadStatus(_, let error) {
+        $.log("Error \(identifier): \(error)")
+        if let message = message {
+            $.log(message)
+        }
+    }
     catch let error as NSError {
         $.log("Error \(identifier): \(error)")
         if let message = message {
@@ -33,6 +40,8 @@ func do_or_log(identifier: String, message: String? = nil, @noescape closure: (V
     }
 }
 
+let accessLogger = FileLogger(path: "./access.log")
+let debugLogger = FileLogger(path: "./debug.log")
 
 struct $ {
     enum Error: ErrorType {
@@ -45,35 +54,21 @@ struct $ {
     static let env = NSProcessInfo.processInfo().environment
     static func log(message: String) {
         print(message)
+        debugLogger.log(message)
+        fflush(stdout)
     }
+    
+    static func accessLog(message: String) {
+        print(message)
+        accessLogger.log(message)
+        fflush(stdout)
+    }
+    
     static let error: (content:String) -> String = { root.render(try! Views.Error.render($0)) }
         
     static func extract<A>(optional: A?) throws -> A {
         guard let value = optional else { throw Error.Unwrap }
         return value
-    }
-    
-    
-    static func respond(identifier: String, @noescape closure: (Void) throws -> Response) -> Response {
-        $.log("Requested: \(identifier)")
-        do {
-            return try closure()
-        }
-        catch $.Error.Unwrap {
-            $.log("Unwrap")
-            return Response(status: .BadRequest, body: "Unwrap" >% $.error)
-        }
-        catch FetcherError.SQL(message: let error) {
-            $.log("Error \(identifier): \(error)")
-            return Response(status: .BadRequest, body: error >% $.error)
-        }
-        catch FetcherError.NotFound {
-            return Response(status: .NotFound, body: "404" >% $.error)
-        }
-        catch let error as NSError {
-            $.log("Error \(identifier): \(error)")
-            return Response(status: .InternalServerError, body: error.localizedDescription >% $.error)
-        }
     }
 }
     

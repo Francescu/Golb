@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090ED6441C613AE7000291AE /* FailureMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090ED6431C613AE7000291AE /* FailureMiddleware.swift */; };
 		0932BB7A1C5960FE0025C900 /* ArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0932BB791C5960FE0025C900 /* ArticleController.swift */; };
 		09460D871C5A0B72006BB494 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09460D861C5A0B72006BB494 /* Database.swift */; };
 		09460D891C5A1A06006BB494 /* TemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09460D881C5A1A06006BB494 /* TemplateView.swift */; };
 		09460D8C1C5A2482006BB494 /* templates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09460D8B1C5A2482006BB494 /* templates.swift */; };
 		09460D8E1C5A2A43006BB494 /* ArticleViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09460D8D1C5A2A43006BB494 /* ArticleViews.swift */; };
 		095151A21C581C7A004B6E93 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095151A11C581C7A004B6E93 /* main.swift */; };
+		096880CD1C5E846A00DB4AB3 /* Migration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096880CC1C5E846A00DB4AB3 /* Migration.swift */; };
+		097487961C6146AB00487C14 /* LoggerMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097487951C6146AB00487C14 /* LoggerMiddleware.swift */; };
 		097D056F1C5955B40038291B /* libSideburns.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097D05641C5955B40038291B /* libSideburns.a */; };
 		097D05701C5955B40038291B /* libMustache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097D05651C5955B40038291B /* libMustache.a */; };
 		097D05711C5955B40038291B /* libPostgreSQL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097D05661C5955B40038291B /* libPostgreSQL.a */; };
@@ -72,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		090ED6431C613AE7000291AE /* FailureMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FailureMiddleware.swift; sourceTree = "<group>"; };
 		0932BB781C5960590025C900 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		0932BB791C5960FE0025C900 /* ArticleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleController.swift; sourceTree = "<group>"; };
 		0932BB7B1C59616E0025C900 /* Client */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Client; path = ../Client; sourceTree = "<group>"; };
@@ -81,6 +85,9 @@
 		09460D8D1C5A2A43006BB494 /* ArticleViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViews.swift; sourceTree = "<group>"; };
 		095151951C581C35004B6E93 /* Golb */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Golb; sourceTree = BUILT_PRODUCTS_DIR; };
 		095151A11C581C7A004B6E93 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		096880CC1C5E846A00DB4AB3 /* Migration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Migration.swift; sourceTree = "<group>"; };
+		096880CF1C5E8F0100DB4AB3 /* DB */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DB; sourceTree = "<group>"; };
+		097487951C6146AB00487C14 /* LoggerMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerMiddleware.swift; sourceTree = "<group>"; };
 		097D05641C5955B40038291B /* libSideburns.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSideburns.a; path = Libs/libSideburns.a; sourceTree = "<group>"; };
 		097D05651C5955B40038291B /* libMustache.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMustache.a; path = Libs/libMustache.a; sourceTree = "<group>"; };
 		097D05661C5955B40038291B /* libPostgreSQL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPostgreSQL.a; path = Libs/libPostgreSQL.a; sourceTree = "<group>"; };
@@ -150,7 +157,6 @@
 		099BE31B1C5969F200AAF8C9 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		099BE31C1C596A8300AAF8C9 /* libJSON.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libJSON.a; path = Libs/libJSON.a; sourceTree = "<group>"; };
 		09C335E71C5E39E500613D77 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
-		09DDA24A1C5CCD310022F0C0 /* db.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = db.sql; sourceTree = "<group>"; };
 		09E5A06A1C5AC793009C040F /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		09E5A06C1C5AC7B4009C040F /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		09E5A06E1C5AC7F3009C040F /* ArticleFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleFetcher.swift; sourceTree = "<group>"; };
@@ -256,10 +262,11 @@
 		09460D8A1C5A2466006BB494 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				09DDA24A1C5CCD310022F0C0 /* db.sql */,
+				096880CF1C5E8F0100DB4AB3 /* DB */,
 				09460D8B1C5A2482006BB494 /* templates.swift */,
 				09E5A0701C5AC856009C040F /* Settings.swift */,
 				09460D861C5A0B72006BB494 /* Database.swift */,
+				096880CC1C5E846A00DB4AB3 /* Migration.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -282,6 +289,8 @@
 				0932BB781C5960590025C900 /* data.json */,
 				09E5A06A1C5AC793009C040F /* Utils.swift */,
 				09E5A06C1C5AC7B4009C040F /* Result.swift */,
+				090ED6431C613AE7000291AE /* FailureMiddleware.swift */,
+				097487951C6146AB00487C14 /* LoggerMiddleware.swift */,
 				09C335E71C5E39E500613D77 /* Fetcher.swift */,
 			);
 			path = Utils;
@@ -406,6 +415,7 @@
 				097D05D51C595B310038291B /* file.c in Sources */,
 				09460D891C5A1A06006BB494 /* TemplateView.swift in Sources */,
 				09E5A06B1C5AC793009C040F /* Utils.swift in Sources */,
+				090ED6441C613AE7000291AE /* FailureMiddleware.swift in Sources */,
 				097D05D61C595B310038291B /* ip.c in Sources */,
 				09E5A0711C5AC856009C040F /* Settings.swift in Sources */,
 				097D05D71C595B310038291B /* list.c in Sources */,
@@ -417,6 +427,7 @@
 				0932BB7A1C5960FE0025C900 /* ArticleController.swift in Sources */,
 				09460D8E1C5A2A43006BB494 /* ArticleViews.swift in Sources */,
 				097D05DA1C595B310038291B /* stack.c in Sources */,
+				097487961C6146AB00487C14 /* LoggerMiddleware.swift in Sources */,
 				097D05DB1C595B310038291B /* tcp.c in Sources */,
 				09460D871C5A0B72006BB494 /* Database.swift in Sources */,
 				097D05DC1C595B310038291B /* timer.c in Sources */,
@@ -424,6 +435,7 @@
 				099BE31A1C59696400AAF8C9 /* ArticleModel.swift in Sources */,
 				097D05DD1C595B310038291B /* udp.c in Sources */,
 				097D05DE1C595B310038291B /* unix.c in Sources */,
+				096880CD1C5E846A00DB4AB3 /* Migration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
