@@ -20,7 +20,6 @@ struct ArticleController {
     }
     
     func list(request: Request) throws -> Response {
-        throw FetcherError.NotFound
         let articles = try fetcher.findAll()
         return try Response(status: .OK, body: ArticleViews.List.render(articles) >% root.render )
     }
