@@ -40,44 +40,6 @@ Swift as a Webserver on Linux – Blog written in Swift
 - [ ] Contributing section
 - [ ] Define the purpose of this repo (Blog engine vs. web framework)
 
-## Technical stuff inside
-### Global error response handler 
-
-Simply using the `$.respond` method allow us to handle well errors.
-
-For instance:
-```swift
-return $.respond("article list") {
-            let articles = try fetcher.findAll()
-            return try Response(status: .OK, body: ArticleViews.List.render(articles) >% root.render )
-        }
-```
-
-Will handle multiple common errors:
-
-```swift
-static func respond(identifier: String, @noescape closure: (Void) throws -> Response) -> Response {
-        $.log("Requested: \(identifier)")
-        do {
-            return try closure()
-        }
-        catch $.Error.Unwrap {
-            return Response(status: .BadRequest, body: "Unwrap" >% $.error)
-        }
-        catch FetcherError.SQL(message: let error) {
-            return Response(status: .BadRequest, body: error >% $.error)
-        }
-        catch FetcherError.NotFound {
-            return Response(status: .NotFound, body: "404" >% $.error)
-        }
-        catch let error as NSError {
-            return Response(status: .InternalServerError, body: error.localizedDescription >% $.error)
-        }
-    }
-```
-
-
-
 ## Community
 
 [![Slack](http://s13.postimg.org/ybwy92ktf/Slack.png)](http://slack.zewo.io)
