@@ -15,6 +15,6 @@ let router = Router() { router in
 
 }  >>> FailureRecoveryMiddleware() >>> AccessLoggerMiddleware()
 
-let server = Server(port: 8002, responder: router )
+let server = Server(port: 8000, responder: router )
 print("Server ready http://127.0.0.1:8000")
 server.start()
