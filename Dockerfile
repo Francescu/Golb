@@ -7,4 +7,6 @@ ADD . /root/golb
 
 RUN rm -rf .build && rm -rf Packages/ && swift build -c ${GOLB_CONFIGURATION:-debug}
 
-ENTRYPOINT ["sh", "-c", ".build/${GOLB_CONFIGURATION:-debug}/Server"]
+EXPOSE 8000
+
+CMD ["sh", "-c", ".build/${GOLB_CONFIGURATION:-debug}/Server"]
