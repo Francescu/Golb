@@ -16,9 +16,13 @@ struct FileLogger {
     func log(string: String) {
         // TODO: Add current date
         do {
+            print("1")
             let file = try File(path: self.path, mode: File.Mode.AppendUpdate)
+            print("2")
             try file.write(Data(bytes: "\(string)\n".data))
+            print("3")
             file.close()
+            print("4")
         }
         catch {
             print("FILE ERROR: \(error)")

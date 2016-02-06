@@ -5,7 +5,7 @@ PORT = 8002
 
 docker:
 	docker build -t $(DOCKER_DEV_NAME) .
-	docker run -d -p $(PORT):$(PORT) --name container-$(DOCKER_DEV_NAME) $(DOCKER_DEV_NAME)
+	docker run -ti -p $(PORT):$(PORT) --name container-$(DOCKER_DEV_NAME) $(DOCKER_DEV_NAME)
 
 clean:
 	swift build --clean

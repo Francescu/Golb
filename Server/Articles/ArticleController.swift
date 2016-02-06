@@ -20,7 +20,9 @@ struct ArticleController {
     }
     
     func list(request: Request) throws -> Response {
+        print("A")
         let articles = try fetcher.findAll()
+        print("B")
         return try Response(status: .OK, body: ArticleViews.List.render(articles) >% root.render )
     }
     

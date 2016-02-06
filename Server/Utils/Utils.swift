@@ -54,12 +54,12 @@ struct $ {
     static let env = NSProcessInfo.processInfo().environment
     static func log(message: String) {
         print(message)
-        debugLogger.log(message)
+//        debugLogger.log(message)
     }
     
     static func accessLog(message: String) {
         print(message)
-        accessLogger.log(message)
+//        accessLogger.log(message)
     }
     
     static let error: (content:String) -> String = { root.render(try! Views.Error.render($0)) }

@@ -9,4 +9,4 @@ RUN rm -rf .build && rm -rf Packages/ && swift build -c debug
 
 EXPOSE 8000
 
-CMD [".build/debug/Server"]
+ENTRYPOINT ["sh", "-c", ".build/debug/Server"]
